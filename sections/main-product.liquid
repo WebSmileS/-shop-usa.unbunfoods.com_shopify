@@ -1,0 +1,169 @@
+
+{{ 'product.css' | asset_url | stylesheet_tag }}
+
+<section class="page-width section-main-product">
+  <div class = "card-wrapper">
+    <div class = "row">
+      <!-- card left -->
+      <div class = "col-md-6 col-sm-12 product-imgs">
+        <div class = "img-display">
+          <div class = "img-showcase">
+            {%- for media in product.media -%}
+              {{ media.tags}}
+              <img
+                srcset="{% if media.preview_image.width >= 288 %}{{ media.preview_image | img_url: '288x' }} 288w,{% endif %}
+                  {% if media.preview_image.width >= 576 %}{{ media.preview_image | img_url: '576x' }} 576w,{% endif %}
+                  {% if media.preview_image.width >= 750 %}{{ media.preview_image | img_url: '750x' }} 750w,{% endif %}
+                  {% if media.preview_image.width >= 1100 %}{{ media.preview_image | img_url: '1100x' }} 1100w,{% endif %}
+                  {% if media.preview_image.width >= 1500 %}{{ media.preview_image | img_url: '1500x' }} 1500w,{% endif %}
+                  {{ media.preview_image | img_url: 'master' }} {{ media.preview_image.width }}w"
+                src="{{ media | img_url: '1500x' }}"
+                sizes="(min-width: {{ settings.page_width }}px) {{ settings.page_width | minus: 100 | times: 0.64 | round }}px, (min-width: 750px) calc((100vw - 11.5rem) / 2), calc(100vw - 4rem)"
+                loading="lazy"
+                width="576"
+                height="{{ 576 | divided_by: media.preview_image.aspect_ratio | ceil }}"
+                alt="{{ product.title | escape }}"
+              >
+            {%- endfor -%}
+          </div>
+        </div>
+        <div class = "img-select">
+          {%- for media in product.media -%}
+            <div class = "img-item">
+              <a href = "#" data-id = "{{ forloop.index }}">
+                <img src="{{ media | img_url: '55x55' }}" alt="{{ product.title | escape }}">
+              </a>
+            </div>
+          {%- endfor -%}
+        </div>
+        <div class = "product-tags">
+        {% for tag in product.tags %}
+          <a href="/collections/all/{{ tag | handleize }}">
+            <span class="el-icon-tag">{{ tag }}</span>
+          </a>
+        {% endfor %}
+        </div>
+      </div>
+      <!-- card right -->
+      <div class = "col-md-6 col-sm-12 product-content">
+        <h2 class = "product-title">{{ product.title | escape }}</h2>
+        <div class = "product-rating">
+
+          <!-- yotpo reviews-->
+            <div class="product__info-wrapper">
+              <div class="yotpo bottomLine"
+                data-product-id="{{ product.id }}">
+              </div>
+            </div>
+          <!-- end yotpo reviews-->
+
+        </div>
+
+        <div class = "product-price">
+          <span>{{ product.price | money }}</span>
+        </div>
+
+        <div class = "product-actions">
+            <div {{ block.shopify_attributes }}>
+              <product-form>
+                {%- form 'product', product, id: product_form_id, class: 'form input_grid', novalidate: 'novalidate', data-type: 'add-to-cart-form' -%}
+                    <input type="number" id="Quantity-{{ section.id }}" name="quantity" value="1" min="1" class="qty_input" pattern="[0-9]*" data-quantity-input>
+                    <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+                        <div class="product-form__buttons">
+                    <button
+                      type="submit"
+                      name="add"
+                      class="new_btn product-form__submit button button--full-width {% if block.settings.show_dynamic_checkout and product.selling_plan_groups == empty %}button--secondary{% else %}button--primary{% endif %}"
+                    {% if product.selected_or_first_available_variant.available == false %}disabled{% endif %}
+                    >
+                        <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.8452 9.21761L7.25768 2.34174L8.7306 0.529202L16.8327 10.4995L8.7306 20.4697L7.25768 18.6572L12.8452 11.7813L0.166015 11.7813L0.166015 9.21761L12.8452 9.21761Z" fill="#F7F3E8"></path>
+                        </svg>
+                        {%- if product.selected_or_first_available_variant.available -%}
+                              {{ 'products.product.add_to_cart' | t }}
+                            {%- else -%}
+                              {{ 'products.product.sold_out' | t }}
+                            {%- endif -%}
+                        <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.272 11.6642L9.8595 18.5401L8.38659 20.3526L0.284503 10.3824L8.38659 0.412109L9.8595 2.22465L4.272 9.10052L16.9512 9.10052L16.9512 11.6642L4.272 11.6642Z" fill="#F7F3E8"></path>
+                        </svg>
+                    </button>
+                    {%- if block.settings.show_dynamic_checkout -%}
+                      {{ form | payment_button }}
+                    {%- endif -%}
+                  </div>
+                {%- endform -%}
+              </product-form>
+
+              {{ 'component-pickup-availability.css' | asset_url | stylesheet_tag }}
+
+              {%- assign pick_up_availabilities = product.selected_or_first_available_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+
+              <pickup-availability class="product__pickup-availabilities no-js-hidden"
+                {% if product.selected_or_first_available_variant.available and pick_up_availabilities.size > 0 %} available{% endif %}
+                data-base-url="{{ shop.url }}{{ routes.root_url }}"
+                data-variant-id="{{ product.selected_or_first_available_variant.id }}"
+                data-has-only-default-variant="{{ product.has_only_default_variant }}"
+              >
+                <template>
+                  <pickup-availability-preview class="pickup-availability-preview">
+                    {% render 'icon-unavailable' %}
+                    <div class="pickup-availability-info">
+                      <p class="caption-large">{{ 'products.product.pickup_availability.unavailable' | t }}</p>
+                      <button class="pickup-availability-button link link--text underlined-link">{{ 'products.product.pickup_availability.refresh' | t }}</button>
+                    </div>
+                  </pickup-availability-preview>
+                </template>
+              </pickup-availability>
+            </div>
+        </div>
+
+        <div class = "product-meta-field">
+          <section>
+            <div class="">
+                <ul class="faq-list">
+                    <li class="the-active">
+                        <h4 class="story-heading">the story</h4>
+                        <p class="read faq-text" style="display: block;">
+                         {{ product.metafields.my_fields.story }}
+                        </p>
+                    </li>
+                    <li>
+                        <h4 class="faq-heading">all real ingredients</h4>
+                        <p class="read faq-text">
+                            {{ product.metafields.my_fields.ingredients }}
+                        </p>
+                    </li>
+                    <li>
+                        <h4 class="faq-heading">nutrition facts</h4>
+                        <p class="read faq-text">
+                          <img src="{{ 'nft-test.png' | asset_url }}"></i>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+          </section>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.yotpo .text-m{
+    font-size: 20px;
+    margin-left: 11px;
+}
+.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-star,
+.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-half-star,
+.yotpo.bottomLine .yotpo-bottomline .yotpo-icon-empty-star,
+.yotpo.bottomline .yotpo-bottomline .yotpo-icon-star,
+.yotpo.bottomline .yotpo-bottomline .yotpo-icon-half-star,
+.yotpo.bottomline .yotpo-bottomline .yotpo-icon-empty-star,
+.yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-star,
+.yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-half-star,
+.yotpo .yotpo-modal-bottom-line .yotpo-bottomline .yotpo-icon-empty-star {
+  font-size: 20px;
+}
+</style>

@@ -1,0 +1,132 @@
+<div class="slider-banner">
+    {% if section.settings.banner_type == "home" %}
+        <div class="slider-content">
+            {% for block in section.blocks %}
+                {% if block.type == "home" %}
+                    <div class="food_content_{{section.settings.banner_type}}">
+                        {% if block.settings.image != blank %}
+                            <img src="{{block.settings.image | img_url: 'large'}}">
+                        {% endif %}
+                        
+                        {% if block.settings.food_name != blank %}
+                            <div class="title_{{section.settings.banner_type}}">{{section.settings.title | append: " " | append: block.settings.food_name }}</div>
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if section.settings.banner_type == "recommended" %}
+        <div class="slider-content">
+            {% if block.settings.food_name != blank %}
+                <div class="title_{{section.settings.banner_type}}">{{section.settings.title }}</div>
+            {% endif %}
+            {% for block in section.blocks %}
+                {% if block.type == "recommended" %}
+                    <div class="food_content_{{section.settings.banner_type}}" data-name = "{{ block.settings.food_name }}">
+                        {% if block.settings.image != blank %}
+                            <img src="{{block.settings.image | img_url: 'medium'}}" >
+                        {% endif %}
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+    {% if section.settings.banner_type == "original" %}
+        <div class="slider-content">
+            <div class="title">{{ section.settings.title }}</div>
+            {% for block in select.blocks %}
+                {% if block.food_name != blank %}
+                    <div class="title_{{section.settings.banner_type}}">{{ block.settings.food_name }}</div>
+                {% endif %}
+                <div class="food_content_{{section.settings.banner_type}}">
+                    {% if block.image != blank %}
+                        <img src="{{block.settings.image | img_url: 'medium'}}" width="100%">
+                    {% endif %}
+                    
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+</div>
+<style>
+    #MainContent {
+        background-color: #0068FF;
+    }
+</style>
+{% schema %}
+    {
+        "name": "Slider Banner",
+        "class": "slider-banner",
+        "settings": [
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Banner Title",
+                "default": "RADICALLY HONEST"
+            },
+            {
+                "type": "select",
+                "id": "banner_type",
+                "label": "Banner Type",
+                "default": "home",
+                "options": [
+                    {
+                        "value": "home",
+                        "label": "Default Home"
+                    },
+                    {
+                        "value": "recommended",
+                        "label": "Recommended Home"
+                    },
+                    {
+                        "value": "original",
+                        "label": "Original Home"
+                    }
+                    
+                ]
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Home Block",
+                "type": "home",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Food Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "food_name",
+                        "label": "Food Name",
+                        "default": "BAGELS"
+                    }
+                ]
+            },
+            {
+                "name": "Recommended Block",
+                "type": "recommended",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Food Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "food_name",
+                        "label": "Food Name",
+                        "default": "BAGELS"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Slider Banner"
+            }
+        ]
+    }
+{% endschema %}

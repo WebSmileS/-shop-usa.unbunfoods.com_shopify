@@ -1,0 +1,18 @@
+<div class="button-content">
+{% for item in (1..3) %}
+    <div class="_btn">
+        <a class="gas_btn {{arrow}}" href="{{ section.settings.bottom_btn_url }}">
+
+            <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.8452 9.21761L7.25768 2.34174L8.7306 0.529202L16.8327 10.4995L8.7306 20.4697L7.25768 18.6572L12.8452 11.7813L0.166015 11.7813L0.166015 9.21761L12.8452 9.21761Z" fill="#F7F3E8"/>
+            </svg>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            {{ text }}
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.272 11.6642L9.8595 18.5401L8.38659 20.3526L0.284503 10.3824L8.38659 0.412109L9.8595 2.22465L4.272 9.10052L16.9512 9.10052L16.9512 11.6642L4.272 11.6642Z" fill="#F7F3E8"/>
+            </svg>
+        </a>
+    </div>
+{% endfor %}
+</div>

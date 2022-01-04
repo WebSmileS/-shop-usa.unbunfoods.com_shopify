@@ -1,0 +1,92 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {}
+    },
+    "real-benefits": {
+      "type": "real-benefits",
+      "settings": {
+        "title": ""
+      }
+    },
+    "product-faq": {
+      "type": "product-faq",
+      "blocks": {
+        "7e3ed6d5-acc8-4258-a652-cda53e5a47ec": {
+          "type": "list",
+          "settings": {
+            "question": "HOW CLEAN ARE THE INGREDIENTS?",
+            "answer": "HOW CLEAN ARE THE INGREDIENTS?"
+          }
+        },
+        "998a8936-dcfd-4b24-b434-437bc2a97b34": {
+          "type": "list",
+          "settings": {
+            "question": "HOW DO I STORE MY PRODUCTS?",
+            "answer": "HOW DO I STORE MY PRODUCTS?"
+          }
+        },
+        "7eebf080-fc2e-4c93-a774-1b43afdd8ff8": {
+          "type": "list",
+          "settings": {
+            "question": "HOW MANY NET CARBS PER SERVING?",
+            "answer": "HOW MANY NET CARBS PER SERVING?"
+          }
+        },
+        "a6afdcce-f4a9-4903-8294-3cde82361efe": {
+          "type": "list",
+          "settings": {
+            "question": "HOW MUCH DOES SHIPPING COST?",
+            "answer": "HOW MUCH DOES SHIPPING COST?"
+          }
+        },
+        "6825919f-3925-4e21-8d82-d292be71f8fa": {
+          "type": "list",
+          "settings": {
+            "question": "CAN I FIND UNBUN PRODUCTS AT STORES?",
+            "answer": "CAN I FIND UNBUN PRODUCTS AT STORES?"
+          }
+        },
+        "92b353e7-314d-4855-b73c-7767ad4bfc9c": {
+          "type": "list",
+          "settings": {
+            "question": "IF I’M NOT SATISFIED CAN I GET MY MONEY BACK?",
+            "answer": "IF I’M NOT SATISFIED CAN I GET MY MONEY BACK?"
+          }
+        }
+      },
+      "block_order": [
+        "7e3ed6d5-acc8-4258-a652-cda53e5a47ec",
+        "998a8936-dcfd-4b24-b434-437bc2a97b34",
+        "7eebf080-fc2e-4c93-a774-1b43afdd8ff8",
+        "a6afdcce-f4a9-4903-8294-3cde82361efe",
+        "6825919f-3925-4e21-8d82-d292be71f8fa",
+        "92b353e7-314d-4855-b73c-7767ad4bfc9c"
+      ],
+      "settings": {
+        "title": "Got questions? we got answers.",
+        "subtitle": "More questions? Find answers on our FAQ Page."
+      }
+    },
+    "product-honest-reviews": {
+      "type": "product-honest-reviews",
+      "settings": {}
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "heading": "You may also like",
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "real-benefits",
+    "product-faq",
+    "product-honest-reviews",
+    "product-recommendations"
+  ]
+}

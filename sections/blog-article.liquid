@@ -1,0 +1,167 @@
+<div class="page-width">
+    {% if section.settings.blogTitle != blank %}
+        <h2 class="blog-title">{{ section.settings.blogTitle | escape }}</h2>
+    {% endif %}
+    <ul class="blog-article">
+        {% for block in section.blocks %}
+            {% assign article = articles[block.settings.blogPost] %}
+            {% if article %}
+                <li class="item">
+                <a href="{{ article.url }}" class="article__link">
+                    {% if article.image %}
+                    {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
+                    {% capture img_wrapper_id %}ArticleImageWrapper-{{ article.image.id }}{% endcapture %}
+                    {%- assign img_url = article.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' -%}
+
+                    {% include 'image-style' with image: article.image, small_style: true, width: 345, height: 345, wrapper_id: img_wrapper_id, img_id: img_id %}
+                    <div class="article__grid-image-wrapper js">
+                        <div class="article__grid-image-container" style="padding-top:{{ 1 | divided_by: article.image.aspect_ratio | times: 100 }}%;">
+                        <img 
+                            class="article__grid-image lazyload"
+                            src="{{ article.image | img_url: '300x300' }}"
+                            data-src="{{ img_url }}"
+                            data-widths="[180, 360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
+                            data-aspectratio="{{ article.image.aspect_ratio }}"
+                            data-sizes="auto"
+                            alt="">
+                        </div>
+                    </div>
+                    <noscript>
+                        <div class="article__grid-image-wrapper">
+                        {{ article | img_url: '345x345', scale: 2 | img_tag: article.title, 'article__grid-image' }}
+                        </div>
+                    </noscript>
+                    {% endif %}
+                </a>
+
+                <div class="article__grid-meta{% if article.image %} article__grid-meta--has-image{% endif %}">
+                    {% if section.settings.blog_show_author %}
+                    <span class="article__author">{{ 'blogs.article.by_author' | t: author: article.author }}</span>
+                    {% endif %}
+
+                    {% if section.settings.blog_show_date %}
+                    <span class="article__date">
+                        {{ article.published_at | time_tag: format: 'date' }}
+                    </span>
+                    {% endif %}
+
+                    <div class="rte article__grid-excerpt">
+                    {% if article.excerpt.size > 0 %}
+                        <p>{{ article.excerpt }}<p>
+                    {% else %}
+                        <p>{{ article.content | strip_html | truncate: 150 }}</p>
+                    {% endif %}
+                    </div>
+
+                    {% if article.tags.size > 0 %}
+                    <div class="article__tags rte">
+                        <ul class="list--inline" aria-label="{{ 'blogs.article.tags' | t }}">
+                        {% for tag in article.tags %}
+                            <li>
+                            <a href="{{ blog.url }}/tagged/{{ tag | handle }}" class="article__grid-tag">{{ tag }}</a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+
+                    <ul class="list--inline article__meta-buttons">
+                    
+                    {% if blog.comments_enabled? and article.comments_count > 0 %}
+                        <li>
+                        <a href="{{ article.url }}#comments" class="article__comment-count btn btn--tertiary btn--small">
+                            {{ 'blogs.comments.comments_with_count' | t: count: article.comments_count }}
+                        </a>
+                        </li>
+                    {% endif %}
+                    </ul>
+                </div>
+                </li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+{% schema %}
+{
+  "name": "Blog article",
+   "settings": 
+    [
+        {
+            "type": "text",
+            "id": "blogTitle",
+            "label": "Blog title"
+        }
+    ],
+   "blocks": [
+        {
+        "name": "article",
+        "type": "article",
+        "settings": [
+                {
+                    "type": "article",
+                    "id": "blogPost",
+                    "label": "Blog article"
+                }
+            ]
+        }
+    ],
+    "presets" : [
+        {
+        "category" : "Blog",
+        "name" : "Blog article"
+        }
+    ]
+}
+{% endschema %}
+
+<style>
+#PageContainer{
+    margin-top: 50px;
+}
+ul.blog-article li img {
+    border-radius: 35px;
+}
+ul.blog-article li p {
+    max-width: 333px;
+    margin-top: 23px;
+    margin-bottom: 50px;
+    font-family: Sohne;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 93%;
+    text-transform: uppercase;
+    color: #0068FF;
+}
+.grid--blog {
+    margin-bottom: 0px;
+}
+.article__link {
+    border-radius: 50px;
+}
+h2.blog-title {
+    margin-bottom: 30px;
+    font-family: Sohne;
+    font-size: 50px;
+    line-height: 93%;
+    font-weight: bold;
+    /* identical to box height, or 47px */
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    color: #0068FF;
+}
+
+.blog-article {
+    display: flex;
+    gap:30px;
+    margin-bottom: 45px;
+}
+.blog-article .item{
+    width: 100%;
+    border-radius: 50px;
+}
+.blog-article .item img {
+    width: 100%;
+}
+</style>

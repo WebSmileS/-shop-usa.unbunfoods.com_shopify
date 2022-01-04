@@ -1,0 +1,190 @@
+<div class="article-background">
+    <div class="page-width">
+        <section class="main-article-section">
+            <div class="row">
+                <div class="col-md-6 col-sm-12">
+                    <div class="article-image-content">
+
+                        <div class="article-images">
+                            <div class="article-image-item blog-image">
+                                <img src="{{ article.image | img_url: '500x' }}">
+                            </div>
+                        </div>
+
+                        <div class="article-images">
+                            <div class="article-image-item"><img
+                                        src="{{ article.metafields.my_metafields.article_image1 }}"></div>
+                            <div class="article-image-item"><img
+                                        src="{{ article.metafields.my_metafileds.article_image2 }}"></div>
+                            <div class="article-image-item"><img
+                                        src="{{ article.metafields.my_metafileds.article_metaimage3 }}"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="article-text-content">
+                        <h1 class="article-title">{{ article.title }}</h1>
+                        <p class="published-info">{{ article.published_at | date_to_string | date: "%B %-d, %Y" }}
+                            BY {{ article.author }}</p>
+                        <div class="article-content">{{ article.content }}</div>
+                        <div class="button-group">
+                            <a href="{{ section.settings.button_link }}" class="new_btn read-more">
+                                <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.8452 9.21761L7.25768 2.34174L8.7306 0.529202L16.8327 10.4995L8.7306 20.4697L7.25768 18.6572L12.8452 11.7813L0.166015 11.7813L0.166015 9.21761L12.8452 9.21761Z"
+                                          fill="#0068ff"/>
+                                </svg>
+                                {{ section.settings.button_label | escape }}
+                                <svg width="17" height="21" viewBox="0 0 17 21" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.272 11.6642L9.8595 18.5401L8.38659 20.3526L0.284503 10.3824L8.38659 0.412109L9.8595 2.22465L4.272 9.10052L16.9512 9.10052L16.9512 11.6642L4.272 11.6642Z"
+                                          fill="#0068ff"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<style>
+    .blog-image img {
+        width: 100%;
+    }
+
+    section.main-article-section {
+        padding-top: 60px;
+    }
+
+    .article-images .article-image-item {
+        margin-top: 35px;
+        padding-right: 30px;
+    }
+
+    .article-text-content {
+        padding-left: 30px;
+    }
+
+    h1.article-title {
+        color: #0068FF;
+        font-size: 110.558px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .article-content {
+        color: #0068FF;
+        font-size: 20px;
+    }
+    header ul#SiteNav .site-nav__link{
+        color: #0068FF !important;
+    }
+    .button-group {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    a.read-more {
+        color: #0068FF !important;
+        border-color: #0068FF;
+    }
+    .footer-menu,header .site-header__mobile-nav, header.site-header{
+        background-color: #f7f3e8;
+    }
+    .footer-menu-wrap .footer-nav li a, .social-menu ul a, .social-menu ul a:hover{
+        color: #0068FF !important;
+    }
+    hr{
+        background-color: #0068FF;
+    }
+    a.read-more:hover {
+        text-decoration: none;
+    }
+    .footer-menu-wrap .footer-nav{
+        width: auto;
+    }
+    .article-image-content {
+        margin-bottom: 150px;
+    }
+
+    .article-background {
+        background-color: #f7f3e8;
+    }
+
+    .article-text-content p {
+        text-transform: uppercase;
+        font-size: 20px;
+        color: #C9C7C1;
+    }
+
+    @media screen and (max-width: 768px) {
+        .article-images .article-image-item {
+            padding-right: 0px;
+        }
+
+        .article-image-content {
+            margin-bottom: 50px;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        h1.article-title {
+            font-size: 80px;
+        }
+        .article-images .article-image-item{
+            width:478px;
+            margin: 50px auto;
+        }
+    }
+
+    @media screen and (max-width: 568px) {
+        .article-images .article-image-item {
+        width: 95%;
+        }
+        }
+</style>
+
+{% schema %}
+{
+"name": "Read More Button",
+"settings": [
+{
+"type": "text",
+"id": "button_label",
+"label": {
+"de": "Button-Lable",
+"en": "Button Lable",
+"es": "Enlace de botón",
+"fr": "Lien du bouton",
+"it": "Lable pulsante",
+"ja": "ボタンリンク",
+"nl": "KnopLable",
+"pt-BR": "Lable do botão",
+"zh-CN": "按钮链接",
+"zh-TW": "按鈕連結"
+}
+},
+{
+"type": "url",
+"id": "button_link",
+"label": {
+"de": "Button-Link",
+"en": "Button link",
+"es": "Enlace de botón",
+"fr": "Lien du bouton",
+"it": "Link pulsante",
+"ja": "ボタンリンク",
+"nl": "Knoplink",
+"pt-BR": "Link do botão",
+"zh-CN": "按钮链接",
+"zh-TW": "按鈕連結"
+}
+}
+]
+}
+{% endschema %}

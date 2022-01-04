@@ -1,0 +1,82 @@
+{% if section.settings.bg_image != blank %}
+    <div class="page-content" style="background-image: url('{{ section.settings.bg_image | img_url: 'large' }}')">
+        <div class="page-width">
+            <div class="so-page-content">
+            {% if section.blocks != blank %}
+                {% for block in section.blocks %}
+                    {% assign count = forloop.index | modulo: 3 %}
+                    {% if count == 1 %}
+                        <div class="slider-content-so row">
+                    {% endif %}
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                        <div class="slider-item-so">
+                            <a href="block.settings.social_url">
+                                {% if block.settings.image %}
+                                    <img src="{{ block.settings.image | img_url: 'medium' }}">
+                                {% endif %}
+                                {% if block.settings.title %}
+                                    <div class="title-so">{{ block.settings.title }}</div>
+                                {% endif %}
+                                {% if block.settings.description %}
+                                    <div class="description-so">{{ block.settings.description }}</div>
+                                {% endif %}
+                            </a>
+                        </div>
+                    </div>
+                    {% if count == 0 or forloop.index == section.blocks.size %}
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            </div>
+        </div>
+    </div>
+{% endif %}
+
+{% schema %}
+    {
+        "name": "Social Slider",
+        "class": "social-slider",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "bg_image",
+                "label": "Background Image"
+            }
+        ], 
+        "blocks": [
+            {
+                "type": "social-feedback",
+                "name": "Social Feedback",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    },       
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Title",
+                        "default": "@HANDLE_"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "description",
+                        "label": "Description"
+                    },
+                    {
+                        "type": "url",
+                        "id": "social_url",
+                        "label": "Social Url"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Social Slider"
+            }
+        ]
+    }
+{% endschema %}

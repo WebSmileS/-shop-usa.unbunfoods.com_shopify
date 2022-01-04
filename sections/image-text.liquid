@@ -1,0 +1,81 @@
+<div class="image-text">
+    <div class="page-width">
+        
+            {% if section.settings.btn_text_1 != blank %}
+                {% include 'button-list' text: section.settings.btn_text_1, arrow: "arrow_down" %}
+            {% endif %}
+        
+        <div class="heading-content">
+            {{ section.settings.heading }}
+        </div>
+        <div class="text-content">
+            {{ section.settings.text }}
+        </div>
+        
+            {% if section.settings.btn_text_2 != blank %}
+                {% include 'button-list' text: section.settings.btn_text_2 %}
+            {% endif %}
+        
+        <div id="product_image">
+            <img class="bg_image_1" src="{{ section.settings.bg_image_1 | img_url: 'medium' }}">
+            <img class="bg_image_2" src="{{ section.settings.bg_image_2 | img_url: 'medium' }}">
+        </div>
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "RichText with Image",
+        "class": "text-image",
+        "settings": [
+            {
+                "type": "text",
+                "id": "heading",
+                "label": "Heading",
+                "default": "gloriously grain free bAking with nothing to hide"
+            },
+            {
+                "type": "text",
+                "id": "text",
+                "label": "Text",
+                "default": "Radically real iNGREDIENTS. Radically tasty PRODUCTS. NO fillers, franken-foods or FUNNY BUSINESS. period."
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_1",
+                "label": "First Background Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "bg_image_2",
+                "label": "Second Background Image"
+            },
+            {
+                "type": "text",
+                "id": "btn_text_1",
+                "label": "Top Button Text",
+                "default": "LET’S GET REAL"
+            },
+            {
+                "type": "text",
+                "id": "btn_text_2",
+                "label": "Bottom Button Text",
+                "default": "Shop Now"
+            },
+            {
+                "type": "url",
+                "id": "top_btn_url",
+                "label": "Top Button Url"
+            },
+            {
+                "type": "url",
+                "id": "bottom_btn_url",
+                "label": "Bottom Button Url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "RichText with Image"
+            }
+        ]
+    }
+{% endschema %}

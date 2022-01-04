@@ -1,0 +1,937 @@
+{
+  "current": {
+    "color_text": "#3d4246",
+    "color_body_text": "#3d4246",
+    "color_sale_text": "#197bbd",
+    "color_button": "#00bbd7",
+    "color_button_text": "#fff",
+    "color_small_button_text_border": "#3d4246",
+    "color_text_field_text": "#000",
+    "color_text_field_border": "#75beb8",
+    "color_text_field": "#fff",
+    "color_image_overlay_text": "#fff",
+    "color_image_overlay": "#3d4246",
+    "image_overlay_opacity": 40,
+    "color_borders": "#e8e9eb",
+    "color_body_bg": "#fff",
+    "type_header_font": "work_sans_n6",
+    "type_header_base_size": 26,
+    "type_base_font": "work_sans_n4",
+    "type_base_size": 16,
+    "type_bold_product_titles": false,
+    "share_image": "",
+    "share_facebook": true,
+    "share_twitter": false,
+    "share_pinterest": true,
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/unbunfoods",
+    "social_pinterest_link": "",
+    "social_instagram_link": "https:\/\/www.instagram.com\/unbunfoods\/",
+    "social_tumblr_link": "",
+    "social_snapchat_link": "",
+    "social_youtube_link": "https:\/\/www.youtube.com\/channel\/UCmW8PcUxugQZmYSj-tU1wrw\/featured",
+    "social_vimeo_link": "",
+    "favicon": "shopify:\/\/shop_images\/admin-ajax.png",
+    "checkout_header_image": "shopify:\/\/shop_images\/newsletter_phot.jpg",
+    "checkout_logo_image": "shopify:\/\/shop_images\/new_Unbun_logo_2Col-1-300x135.png",
+    "checkout_logo_position": "left",
+    "checkout_logo_size": "medium",
+    "checkout_body_background_image": "",
+    "checkout_body_background_color": "#fff",
+    "checkout_input_background_color_mode": "white",
+    "checkout_sidebar_background_image": "",
+    "checkout_sidebar_background_color": "#fafafa",
+    "checkout_heading_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_body_font": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'",
+    "checkout_accent_color": "#197bbd",
+    "checkout_button_color": "#197bbd",
+    "checkout_error_color": "#e32c2b",
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "align_logo": "left",
+          "blue_logo": "shopify:\/\/shop_images\/UNBUN_LOGO_BLUE_72ppi.png",
+          "white_logo": "shopify:\/\/shop_images\/UNBUN_LOGO_72ppi.png",
+          "logo_max_width": 250,
+          "main_linklist": "unbunfoods-main-menu",
+          "message": false,
+          "home_page_only": false,
+          "message_text": "FREE SHIPPING FOR FIRST TIME CUSTOMERS MINIMUM $20 ORDER - DISCOUNT CODE: NEWUNBUN",
+          "message_link": "",
+          "color_bg": "#000000",
+          "color_text": "#ffffff"
+        }
+      },
+      "hero": {
+        "type": "hero",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/Fun-brunch-opt_8c69efbd-e72a-4a28-b2c5-30c92a103752.jpg",
+          "alignment": "center",
+          "hero_layout": "full_width",
+          "hero_size": "large",
+          "text_size": "medium",
+          "title": "Deliciously Uncompromising Bakery Products",
+          "text": "<p>Gluten-free • Grain-free • Paleo • Keto<\/p>",
+          "button_label": "Buy Products",
+          "button_link": "shopify:\/\/collections\/buy-unbun-products"
+        }
+      },
+      "slideshow": {
+        "type": "slideshow",
+        "disabled": true,
+        "blocks": {
+          "slideshow-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Copy-of-Unbun_BurgersV2-131.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "slideshow-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Copy-of-Unbun_BurgersV2-130.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "6b163f0f-1df4-4174-a1ad-e341f0ec864a": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Copy-of-Unbun_BurgersV2-137.jpg",
+              "alignment": "center center",
+              "slide_title": "",
+              "subheading": "",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "slideshow-0",
+          "slideshow-1",
+          "6b163f0f-1df4-4174-a1ad-e341f0ec864a"
+        ],
+        "settings": {
+          "slideshow_height": "small",
+          "text_size": "medium",
+          "text_alignment": "center center",
+          "show_overlay": true,
+          "autorotate": false,
+          "autorotate_speed": 5
+        }
+      },
+      "featured-collections": {
+        "type": "collection",
+        "settings": {
+          "title": "Our Products",
+          "collection": "buy-unbun-products",
+          "grid": 4,
+          "rows": 2,
+          "show_vendor": false,
+          "show_view_all": true
+        }
+      },
+      "feature-row": {
+        "type": "feature-row",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_264400bc-f9ea-4142-a688-b2b8fd7e6eaf.png",
+          "layout": "left",
+          "title": "only the g.o.a.t.",
+          "text": "<p>we think each of our ingredients is the greatest of all time...in our humble of opinion, of course. selected specifically for being, clean, natural and tasty.<\/p>",
+          "button_label": "SHOP NOW",
+          "button_link": "shopify:\/\/collections\/buy-unbun-products"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "b09208f8-8950-4c16-bf3f-cfff1aaaa623": {
+            "type": "text",
+            "settings": {
+              "title": "Talk to clients",
+              "text": "<p>sign up for fresh-baked updates from the radically honest world of unbun<\/p>"
+            }
+          },
+          "e021d078-987a-4665-9ba9-6f0dbab4b802": {
+            "type": "newsletter",
+            "settings": {
+              "title": "Newsletter"
+            }
+          },
+          "274e4ab3-7935-436a-8cfd-774f21bfa58d": {
+            "type": "link_list",
+            "settings": {
+              "title": "Footer Menu",
+              "menu": "footer"
+            }
+          }
+        },
+        "block_order": [
+          "b09208f8-8950-4c16-bf3f-cfff1aaaa623",
+          "e021d078-987a-4665-9ba9-6f0dbab4b802",
+          "274e4ab3-7935-436a-8cfd-774f21bfa58d"
+        ],
+        "settings": {
+          "footer_logo": "shopify:\/\/shop_images\/UNBUN.png",
+          "show_payment_icons": true,
+          "color_footer_bg": "#f7f3e8",
+          "color_footer_text": "#3d4246"
+        }
+      },
+      "cart-template": {
+        "type": "cart-template",
+        "settings": {
+          "cart_notes_enable": false
+        }
+      },
+      "collection-template": {
+        "type": "collection-template",
+        "settings": {
+          "layout": "grid",
+          "grid": 4,
+          "rows": 6,
+          "show_collection_image": true,
+          "show_vendor": false,
+          "sort_enable": false,
+          "tags_enable": false
+        }
+      },
+      "product-template": {
+        "type": "product-template",
+        "settings": {
+          "image_size": "medium",
+          "show_quantity_selector": true,
+          "show_variant_labels": true,
+          "show_vendor": false,
+          "enable_zoom": true,
+          "enable_payment_button": true,
+          "show_share_buttons": true
+        }
+      },
+      "product-recommendations": {
+        "type": "product-recommendations",
+        "settings": {
+          "show_product_recommendations": true,
+          "heading": "You may also like",
+          "show_vendor": false
+        }
+      },
+      "list-collections-template": {
+        "type": "list-collections-template",
+        "settings": {
+          "display_type": "all",
+          "sort": "alphabetical",
+          "grid": 3
+        }
+      },
+      "blog-template": {
+        "type": "blog-template",
+        "settings": {
+          "layout": "grid",
+          "blog_show_author": false,
+          "blog_show_date": true
+        }
+      },
+      "image-with-text": {
+        "type": "image-with-text",
+        "blocks": {
+          "a88db97d-cce9-4cc3-8c44-7da0ae7ed144": {
+            "type": "text",
+            "settings": {
+              "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "a88db97d-cce9-4cc3-8c44-7da0ae7ed144"
+        ],
+        "settings": {
+          "image": "shopify:\/\/shop_images\/image_314.png",
+          "height": "adapt",
+          "color_scheme": "background-1",
+          "layout": "image_first"
+        }
+      },
+      "slider-text": {
+        "type": "slider-text",
+        "settings": {
+          "slider_image": "shopify:\/\/shop_images\/UNBUN.png",
+          "title": "",
+          "description": "",
+          "btn_text": "",
+          "btn_url": "",
+          "slider_row": 1,
+          "slider_column": 3
+        }
+      },
+      "our-story-content1": {
+        "type": "our-story-content1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/image_405_1.png",
+          "layout": "right",
+          "title": "lettuce ain't no bun*",
+          "text": "",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "our-story-content2": {
+        "type": "our-story-content2",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_4.png",
+          "layout": "left",
+          "title": "*a not-so-direct quote from our founder gus klemos",
+          "text": "<p>as he watched his favourite burger slip through the flimsy fold of a lettuce leaf, the seed of unbun was planted: couldn't this done better?<\/p>",
+          "button_label": "blog",
+          "button_link": "shopify:\/\/pages\/blog"
+        }
+      },
+      "our-story-content3": {
+        "type": "our-story-content3",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/image_406_1.png",
+          "layout": "right",
+          "title": "you're in a villa...",
+          "text": "<p>(or at least that's how you feel.)<\/p><p>that sensation of looking out over glittering blue mediterranean water is the feeling we want our utterly clean baking to leave people with(hint, hint...gus is greek.)<\/p>",
+          "button_label": "shop now",
+          "button_link": "shopify:\/\/pages\/shop"
+        }
+      },
+      "our-story-content4": {
+        "type": "our-story-content4",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_5.png",
+          "layout": "left",
+          "title": "baked clean a.f",
+          "text": "<p>it's no secret that baking without grain or gluten is really hard. and too often, extra stuff sneaks in to make it easier. not at unbun. just the realest ingredients. endof story<\/p>",
+          "button_label": "ingredients",
+          "button_link": "shopify:\/\/pages\/ingredients"
+        }
+      },
+      "product-collection": {
+        "type": "product-collection",
+        "blocks": {
+          "445f6996-6617-405b-be6d-e2812c44d9e7": {
+            "type": "slide",
+            "settings": {
+              "title": "bread",
+              "collection": "buy-unbun-products",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          },
+          "015ccd54-8026-4baa-b2e2-c20806e22a02": {
+            "type": "slide",
+            "settings": {
+              "title": "bagels",
+              "collection": "buy-unbun-products",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          },
+          "c222cc2c-d035-408e-b945-ba037bfa0521": {
+            "type": "slide",
+            "settings": {
+              "title": "buns",
+              "collection": "buy-unbun-products",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          },
+          "94608625-bde8-45d8-9f18-ac2d4809ddbd": {
+            "type": "slide",
+            "settings": {
+              "title": "pizzas",
+              "collection": "bundles",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          },
+          "2fccd0fb-4d49-4185-8282-8545f375230f": {
+            "type": "slide",
+            "settings": {
+              "title": "crusts",
+              "collection": "buy-unbun-products",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          },
+          "f6bffcb4-2cbf-44b0-96b1-009d14a9258a": {
+            "type": "slide",
+            "settings": {
+              "title": "category name",
+              "collection": "buy-unbun-products",
+              "grid": 4,
+              "rows": 1,
+              "button_label": "ADD TO CART",
+              "button_link": "",
+              "jump_button_label": "ADD TO CART",
+              "jump_button_link": "",
+              "show_vendor": false,
+              "show_view_all": false
+            }
+          }
+        },
+        "block_order": [
+          "445f6996-6617-405b-be6d-e2812c44d9e7",
+          "015ccd54-8026-4baa-b2e2-c20806e22a02",
+          "c222cc2c-d035-408e-b945-ba037bfa0521",
+          "94608625-bde8-45d8-9f18-ac2d4809ddbd",
+          "2fccd0fb-4d49-4185-8282-8545f375230f",
+          "f6bffcb4-2cbf-44b0-96b1-009d14a9258a"
+        ],
+        "settings": {}
+      },
+      "ingredients-content": {
+        "type": "ingredients-content",
+        "blocks": {
+          "fee1c090-4d9b-41e2-921f-c1b0e0e10651": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "Blanched almond flour",
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_cbe23696-4d23-4f09-bc02-22156e7495e7.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          },
+          "a53ede92-21ce-4ade-b5e5-ac32627ed0fa": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "Liquid whole egg",
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_3_48451145-11d9-4d1b-ae02-41cb0027afa9.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          },
+          "ab69d324-b127-4f51-b8bc-e7f54ed8b319": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "Tomato Sauce tomatoes",
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_2_1770038b-d56e-4585-88ed-bdd0645ec7e3.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          },
+          "d1e3824a-c29f-47a9-8e89-50180b0134af": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "omato Sauce tomatoes",
+              "image": "shopify:\/\/shop_images\/image_240.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          },
+          "5673bfe8-9420-4d4d-ab13-09964f2d082f": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "extra virgin olive oil",
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_cbe23696-4d23-4f09-bc02-22156e7495e7.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          },
+          "095ec3d0-1ddc-46bd-9244-3b308a461878": {
+            "type": "Ingredient",
+            "settings": {
+              "ingredient": "Garlic powder, Dried basil",
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_264400bc-f9ea-4142-a688-b2b8fd7e6eaf.png",
+              "description": "<p>A fruit unlike any other, coconut flour is high in many minerals like manganese<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "fee1c090-4d9b-41e2-921f-c1b0e0e10651",
+          "a53ede92-21ce-4ade-b5e5-ac32627ed0fa",
+          "ab69d324-b127-4f51-b8bc-e7f54ed8b319",
+          "d1e3824a-c29f-47a9-8e89-50180b0134af",
+          "5673bfe8-9420-4d4d-ab13-09964f2d082f",
+          "095ec3d0-1ddc-46bd-9244-3b308a461878"
+        ],
+        "settings": {}
+      },
+      "blog-feature": {
+        "type": "blog-feature",
+        "blocks": {
+          "b6e379e6-8048-43a2-8df8-fd8f9db3ead3": {
+            "type": "Freature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_3_48451145-11d9-4d1b-ae02-41cb0027afa9.png",
+              "layout": "left",
+              "title": "ready steady bake",
+              "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborre et dolore magna aliqua.<\/p>",
+              "comment": "september 24, 2021 by ryan robinson",
+              "button_label": "read more",
+              "button_link": "shopify:\/\/pages\/blog"
+            }
+          },
+          "d9c80dc3-bd5b-4ec2-8be3-16cb1504abcd": {
+            "type": "Freature",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_4_3d26da1d-0617-46b1-8cb5-68b311386ec4.png",
+              "layout": "right",
+              "title": "burger stack secrets",
+              "text": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut laborre et dolore magna aliqua.<\/p>",
+              "comment": "september 24, 2021 by ryan robinson",
+              "button_label": "read more",
+              "button_link": "shopify:\/\/pages\/blog"
+            }
+          }
+        },
+        "block_order": [
+          "b6e379e6-8048-43a2-8df8-fd8f9db3ead3",
+          "d9c80dc3-bd5b-4ec2-8be3-16cb1504abcd"
+        ],
+        "settings": {}
+      },
+      "feature-row1": {
+        "type": "feature-row1",
+        "settings": {
+          "image": "shopify:\/\/shop_images\/image_314.png",
+          "layout": "right",
+          "title": "aettuce ain't no bun*",
+          "text": "",
+          "button_label": "said gus",
+          "button_link": ""
+        }
+      },
+      "feature-row2": {
+        "type": "feature-row2",
+        "settings": {
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "feature-row3": {
+        "type": "feature-row3",
+        "settings": {
+          "layout": "left",
+          "title": "Image with text",
+          "text": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+          "button_label": "",
+          "button_link": ""
+        }
+      },
+      "our-story-buttons": {
+        "type": "our-story-buttons",
+        "settings": {
+          "btn_text": "SAID GuS",
+          "btn_url": ""
+        }
+      },
+      "blog-article": {
+        "type": "blog-article",
+        "blocks": {
+          "3220e32e-cf0e-4f37-940e-f62e0e5bca32": {
+            "type": "article",
+            "settings": {
+              "blogPost": "latest\/article1"
+            }
+          },
+          "22c96662-7449-48d4-abaa-7c3f16310d92": {
+            "type": "article",
+            "settings": {
+              "blogPost": "latest\/article2"
+            }
+          },
+          "d5efd054-800e-41cf-8917-0c3a00cae83b": {
+            "type": "article",
+            "settings": {
+              "blogPost": "latest\/article3"
+            }
+          }
+        },
+        "block_order": [
+          "3220e32e-cf0e-4f37-940e-f62e0e5bca32",
+          "22c96662-7449-48d4-abaa-7c3f16310d92",
+          "d5efd054-800e-41cf-8917-0c3a00cae83b"
+        ],
+        "settings": {
+          "blogTitle": "the latest"
+        }
+      }
+    },
+    "content_for_index": [
+      "hero",
+      "featured-collections",
+      "feature-row",
+      "slideshow"
+    ]
+  },
+  "presets": {
+    "Default": {
+      "color_text": "#3d4246",
+      "color_body_text": "#69727b",
+      "color_sale_text": "#557B97",
+      "color_borders": "#e8e9eb",
+      "color_button": "#557B97",
+      "color_button_text": "#fff",
+      "color_small_button_text_border": "#3d4246",
+      "color_text_field": "#fff",
+      "color_text_field_text": "#000",
+      "color_text_field_border": "#949494",
+      "color_image_overlay_text": "#fff",
+      "color_image_overlay": "#3d4246",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#fff",
+      "type_header_font": "work_sans_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "work_sans_n4",
+      "type_base_size": 16,
+      "type_bold_product_titles": false,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {}
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {}
+            },
+            "slideshow-1": {
+              "type": "image",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "slideshow-1"
+          ],
+          "settings": {}
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "collection": "frontpage"
+          }
+        },
+        "feature-row": {
+          "type": "feature-row",
+          "settings": {}
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "feature-row",
+        "slideshow"
+      ]
+    },
+    "Light": {
+      "color_text": "#162950",
+      "color_body_text": "#6d6d6d",
+      "color_sale_text": "#DA2F0C",
+      "color_borders": "#e4e4e4",
+      "color_button": "#DA2F0C",
+      "color_button_text": "#ffffff",
+      "color_small_button_text_border": "#162950",
+      "color_text_field": "#ffffff",
+      "color_text_field_text": "#162950",
+      "color_text_field_border": "#909090",
+      "color_image_overlay_text": "#ffffff",
+      "color_image_overlay": "#3d3d3d",
+      "image_overlay_opacity": 40,
+      "color_body_bg": "#f8f8f8",
+      "type_header_font": "muli_n6",
+      "type_header_base_size": 26,
+      "type_base_font": "muli_n4",
+      "type_base_size": 18,
+      "type_bold_product_titles": true,
+      "share_facebook": true,
+      "share_twitter": true,
+      "share_pinterest": true,
+      "social_twitter_link": "",
+      "social_facebook_link": "",
+      "social_pinterest_link": "",
+      "social_instagram_link": "",
+      "social_tumblr_link": "",
+      "social_snapchat_link": "",
+      "social_youtube_link": "",
+      "social_vimeo_link": "",
+      "favicon": "",
+      "checkout_header_image": "",
+      "checkout_logo_image": "",
+      "checkout_logo_position": "left",
+      "checkout_logo_size": "small",
+      "checkout_body_background_image": "",
+      "checkout_body_background_color": "#ffffff",
+      "checkout_input_background_color_mode": "white",
+      "checkout_sidebar_background_image": "",
+      "checkout_sidebar_background_color": "#e8f3f6",
+      "checkout_heading_font": "Roboto",
+      "checkout_body_font": "Source Sans Pro",
+      "checkout_accent_color": "#1990c6",
+      "checkout_button_color": "#23314e",
+      "checkout_error_color": "#ff6d6d",
+      "sections": {
+        "header": {
+          "type": "header",
+          "settings": {
+            "align_logo": "left",
+            "logo": "",
+            "logo_max_width": 135,
+            "main_linklist": "main-menu",
+            "message": true,
+            "color_bg": "#162950",
+            "color_text": "#ffffff"
+          }
+        },
+        "hero": {
+          "type": "hero",
+          "settings": {
+            "alignment": "center",
+            "hero_size": "x-large",
+            "text_size": "large"
+          }
+        },
+        "slideshow": {
+          "type": "slideshow",
+          "blocks": {
+            "slideshow-0": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center center"
+              }
+            },
+            "1492095993817": {
+              "type": "image",
+              "settings": {
+                "image": "",
+                "alignment": "center"
+              }
+            }
+          },
+          "block_order": [
+            "slideshow-0",
+            "1492095993817"
+          ],
+          "settings": {
+            "slideshow_height": "medium",
+            "text_size": "medium",
+            "autorotate": false,
+            "autorotate_speed": 5
+          }
+        },
+        "featured-collections": {
+          "type": "collection",
+          "settings": {
+            "grid": 3,
+            "rows": 1,
+            "show_vendor": true,
+            "show_view_all": true
+          }
+        },
+        "product-template": {
+          "type": "product-template",
+          "settings": {
+            "image_size": "medium",
+            "show_quantity_selector": false,
+            "show_variant_labels": true,
+            "show_vendor": false,
+            "enable_zoom": true,
+            "show_share_buttons": true
+          }
+        },
+        "collection-template": {
+          "type": "collection-template",
+          "settings": {
+            "layout": "grid",
+            "grid": 2,
+            "rows": 2,
+            "show_collection_image": true,
+            "show_vendor": false,
+            "sort_enable": true,
+            "tags_enable": true
+          }
+        },
+        "1492033809691": {
+          "type": "map",
+          "settings": {}
+        },
+        "1492033877875": {
+          "type": "quotes",
+          "blocks": {
+            "1492033877875-0": {
+              "type": "quote",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492033877875-0"
+          ],
+          "settings": {}
+        },
+        "1492033924902": {
+          "type": "custom-content",
+          "blocks": {
+            "1492033924902-0": {
+              "type": "text",
+              "settings": {
+                "width": "100%",
+                "alignment": "center",
+                "align_text": "center"
+              }
+            }
+          },
+          "block_order": [
+            "1492033924902-0"
+          ],
+          "settings": {
+            "title": ""
+          }
+        },
+        "1492096252560": {
+          "type": "collection-list",
+          "blocks": {
+            "1492096252560-0": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-1": {
+              "type": "featured_collection",
+              "settings": {}
+            },
+            "1492096252560-2": {
+              "type": "featured_collection",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "1492096252560-0",
+            "1492096252560-1",
+            "1492096252560-2"
+          ],
+          "settings": {
+            "grid": 3
+          }
+        },
+        "blog-template": {
+          "type": "blog-template",
+          "settings": {
+            "layout": "grid",
+            "blog_show_author": true,
+            "blog_show_date": false
+          }
+        },
+        "article-template": {
+          "type": "article-template",
+          "settings": {
+            "blog_show_author": true,
+            "blog_show_date": true,
+            "show_share_buttons": true
+          }
+        },
+        "cart-template": {
+          "type": "cart-template",
+          "settings": {
+            "cart_notes_enable": false
+          }
+        },
+        "footer": {
+          "type": "footer",
+          "blocks": {
+            "link_list": {
+              "type": "link_list",
+              "settings": {}
+            },
+            "text": {
+              "type": "text",
+              "settings": {}
+            },
+            "newsletter": {
+              "type": "newsletter",
+              "settings": {}
+            }
+          },
+          "block_order": [
+            "link_list",
+            "text",
+            "newsletter"
+          ],
+          "settings": {}
+        }
+      },
+      "content_for_index": [
+        "hero",
+        "featured-collections",
+        "slideshow",
+        "1492033924902",
+        "1492096252560",
+        "1492033877875",
+        "1492033809691"
+      ]
+    }
+  }
+}

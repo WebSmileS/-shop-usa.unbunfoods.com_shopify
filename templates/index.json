@@ -1,0 +1,281 @@
+{
+  "sections": {
+    "rich_text": {
+      "type": "rich-text",
+      "disabled": true,
+      "settings": {
+        "full_width": false,
+        "section_title": "Talk about your brand",
+        "text": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.<\/p>",
+        "text_size": "medium"
+      }
+    },
+    "16346486102737f341": {
+      "type": "slider-banner",
+      "blocks": {
+        "4d27cd44-9e76-4a54-b34e-c17755da6388": {
+          "type": "home",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_363.png",
+            "food_name": "BAGELS"
+          }
+        },
+        "8c567b10-fce0-475f-b637-f7b993cbcec6": {
+          "type": "home",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_363.png",
+            "food_name": "BAGELS"
+          }
+        },
+        "91189094-c557-4496-9f65-2766b91cd788": {
+          "type": "home",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/image_363.png",
+            "food_name": "BAGELS"
+          }
+        }
+      },
+      "block_order": [
+        "4d27cd44-9e76-4a54-b34e-c17755da6388",
+        "8c567b10-fce0-475f-b637-f7b993cbcec6",
+        "91189094-c557-4496-9f65-2766b91cd788"
+      ],
+      "settings": {
+        "title": "RADICALLY HONEST",
+        "banner_type": "home"
+      }
+    },
+    "16346502155e7e324d": {
+      "type": "image-text",
+      "settings": {
+        "heading": "gloriously grain free bAking with nothing to hide",
+        "text": "Radically real iNGREDIENTS. Radically tasty PRODUCTS. NO fillers, franken-foods or FUNNY BUSINESS. period.",
+        "bg_image_1": "shopify:\/\/shop_images\/image_299.png",
+        "bg_image_2": "shopify:\/\/shop_images\/image_300.png",
+        "btn_text_1": "LET’S GET REAL",
+        "btn_text_2": "Shop Now",
+        "top_btn_url": "",
+        "bottom_btn_url": ""
+      }
+    },
+    "16346488189f43c5a4": {
+      "type": "slider-text",
+      "settings": {
+        "slider_image": "shopify:\/\/shop_images\/UNBUN.png",
+        "title": "both HEALTHY & HEAVENLY",
+        "description": "WE’RE TAKING GRAIN-FREE BAKING TO ANOTHER LEVEL OF TASTE AND TRANSPARENCY...because, well, it’s about time someone did.",
+        "image": "shopify:\/\/shop_images\/image_400.png",
+        "btn_text": "view products",
+        "btn_url": "",
+        "slider_row": 3,
+        "slider_column": 3
+      }
+    },
+    "163464946543089f35": {
+      "type": "slider-stockist",
+      "blocks": {
+        "b7880132-74b2-4e4c-931e-bfbfbe8663f8": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        },
+        "c9cdb66e-c908-4296-bd87-8c6a56d0fc89": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "6340366e-e727-47ca-98f6-b5b33e37bd96": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        },
+        "73c712ff-3063-40ed-9631-eadb0ee2be76": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "f1612ee5-7e92-4588-896b-7ebd833d2e31": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "35c27708-a983-461b-9251-7ce76dfa6231": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        },
+        "8b2740c9-0796-4679-8e83-75211f5fb4cb": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "147fe729-91df-4aa2-a85e-aaef54c99ed7": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        },
+        "0016326b-942c-47c9-a3f7-82ca978e7dea": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "3f960c25-bcbe-4175-9206-111a84aec8d5": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        },
+        "3ccdd0c5-cf1b-48ac-b854-947fca5ae013": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_402.png",
+            "stockist_url": ""
+          }
+        },
+        "63592ae2-f39a-43f8-b0aa-2d276207dacf": {
+          "type": "image",
+          "settings": {
+            "stockist_image": "shopify:\/\/shop_images\/image_401.png",
+            "stockist_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "b7880132-74b2-4e4c-931e-bfbfbe8663f8",
+        "c9cdb66e-c908-4296-bd87-8c6a56d0fc89",
+        "6340366e-e727-47ca-98f6-b5b33e37bd96",
+        "73c712ff-3063-40ed-9631-eadb0ee2be76",
+        "f1612ee5-7e92-4588-896b-7ebd833d2e31",
+        "35c27708-a983-461b-9251-7ce76dfa6231",
+        "8b2740c9-0796-4679-8e83-75211f5fb4cb",
+        "147fe729-91df-4aa2-a85e-aaef54c99ed7",
+        "0016326b-942c-47c9-a3f7-82ca978e7dea",
+        "3f960c25-bcbe-4175-9206-111a84aec8d5",
+        "3ccdd0c5-cf1b-48ac-b854-947fca5ae013",
+        "63592ae2-f39a-43f8-b0aa-2d276207dacf"
+      ],
+      "settings": {}
+    },
+    "1634649311fc109527": {
+      "type": "feature-row",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/20191017_SK_177.png",
+        "layout": "left",
+        "title": "ONLY THE REALEST",
+        "text": "<p>Fear not the ingredient label. <br\/>We’ve sourced the cleanest ingredients for all our products. don’t JUST take our word for it, check the back.<\/p>",
+        "button_label": "ingredients",
+        "button_link": "#"
+      }
+    },
+    "1634649323583e1449": {
+      "type": "feature-row",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/image_314.png",
+        "layout": "right",
+        "title": "LET’S  BAKE, BABY",
+        "text": "<p>THE DOORS TO OUR KITCHEN ARE <br\/>ALWAYS OPEN (METAPHORICALLY...) <br\/>SO TAKE A PEEK INTO OUR PROCESS: <br\/>the people, the places and the recipes.<\/p>",
+        "button_label": "Blog",
+        "button_link": "#"
+      }
+    },
+    "16346488707020754f": {
+      "type": "slider-social",
+      "blocks": {
+        "8d8a2294-d4bf-430a-a60f-002b179f1516": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_1.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother of <\/p><p>buns. this hit the <\/p><p>sopt.\"<\/p>",
+            "social_url": ""
+          }
+        },
+        "59f19a63-7ab2-42e6-88cf-99a1e3965ee2": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_2.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother of <\/p><p>buns. this hit the <\/p><p>sopt.\"<\/p>",
+            "social_url": ""
+          }
+        },
+        "d7458c23-8c83-4e80-a4c1-0eaf6756bef6": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_3.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother <\/p><p>of buns. this hit the <\/p><p>sopt.\"<\/p>",
+            "social_url": ""
+          }
+        },
+        "65568d56-69c8-4b3e-aff9-dc42b44fb9ba": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_1.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother of <\/p><p>buns. this hit the <\/p><p>sopt.\"<br\/><\/p>",
+            "social_url": ""
+          }
+        },
+        "f4ab5c07-a262-44d6-b255-fa4371933a71": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_2.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother of <\/p><p>buns. this hit the <\/p><p>sopt.\"<\/p>",
+            "social_url": ""
+          }
+        },
+        "cd11cd42-db9a-4ff0-bdb5-b7a156402489": {
+          "type": "social-feedback",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0_3.png",
+            "title": "@HANDLE_",
+            "description": "<p>\"holy mother of <\/p><p>buns. this hit the <\/p><p>sopt.\"<\/p>",
+            "social_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "8d8a2294-d4bf-430a-a60f-002b179f1516",
+        "59f19a63-7ab2-42e6-88cf-99a1e3965ee2",
+        "d7458c23-8c83-4e80-a4c1-0eaf6756bef6",
+        "65568d56-69c8-4b3e-aff9-dc42b44fb9ba",
+        "f4ab5c07-a262-44d6-b255-fa4371933a71",
+        "cd11cd42-db9a-4ff0-bdb5-b7a156402489"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/49add82624a8349faccccf5fa1f88cc0.png"
+      }
+    }
+  },
+  "order": [
+    "rich_text",
+    "16346486102737f341",
+    "16346502155e7e324d",
+    "16346488189f43c5a4",
+    "163464946543089f35",
+    "1634649311fc109527",
+    "1634649323583e1449",
+    "16346488707020754f"
+  ]
+}

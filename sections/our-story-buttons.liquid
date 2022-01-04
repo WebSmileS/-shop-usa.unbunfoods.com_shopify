@@ -1,0 +1,31 @@
+<div class="image-text">
+    <div class="page-width">
+            {% if section.settings.btn_text != blank %}
+                {% include 'button-list' text: section.settings.btn_text, arrow: "arrow_down" %}
+            {% endif %}
+    </div>
+</div>
+{% schema %}
+    {
+        "name": "Buttons",
+        "class": "text-image",
+        "settings": [
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button Text",
+                "default": "SAID GuS"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Button Url"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Buttons"
+            }
+        ]
+    }
+{% endschema %}

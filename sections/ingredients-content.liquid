@@ -1,0 +1,248 @@
+<div class="page-width" style="margin-top: 35px;">
+  {% for block in section.blocks %}
+    <p class="ingredient-name sentence hello">{{ block.settings.ingredient }} </p>
+    <input type="hidden" src="{{ block.settings.image | img_url }}" title="{{ block.settings.ingredient }}" value="{{ block.settings.description }}" />
+  {% endfor %}
+  
+  <div id = "grid">
+      <div class = "alex">
+          <ul id = "ourList"></ul>
+          </>
+      </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Ingredients",
+  "blocks": [
+    {
+     "name": "Ingredient",
+      "type": "Ingredient",
+      "settings": [
+        {
+          "type": "text",
+          "id": "ingredient",
+          "label": "Ingredient name"    
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "description"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<style>
+  {% comment %}
+  /* ===================BEGIN TEXT ANIMATION CUSTOM STYLE=========================== */
+    {% endcomment %}
+
+    :root {
+      --animation-delay: 100ms;
+    }
+
+    span {
+      opacity: 0;
+      animation-name: typewriter;
+      animation-fill-mode: forwards;
+      animation-duration: 0s;
+      animation-delay: calc(var(--animation-order) * var(--animation-delay));
+    }
+
+    @keyframes typewriter {
+      from {
+          opacity: 0;
+      }
+
+      to {
+          opacity: 1;
+      }
+    }
+
+    {% comment %}
+  /* ===================END TEXT ANIMATION CUSTOM STYLE=========================== */
+  {% endcomment %}
+
+  {% comment %}
+  /* ===================BEGIN WHEN TEXT HOVER POPUP IMAGE SCRIPT========================== */
+  {% endcomment %}
+    #image{
+        width:400px;
+        /*   visibility:hidden; */
+        display:grid;
+    }
+
+    .alex{
+        display:grid;
+        justify-items:center;
+        /*   align-items:center; */
+        /*   height:100vh; */
+    }
+    img {
+        width: 220px;
+      /*   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 72% 100%, 50% 75%, 0% 75%); */
+    }
+    #ourList{
+        list-style:none;
+    }
+  {% comment %}
+  /* ===================END WHEN TEXT HOVER POPUP IMAGE SCRIPT=========================== */
+  {% endcomment %}
+
+  {% comment %}
+  /* ===================BEGIN CUSTOM STYLE=========================== */
+  {% endcomment %}
+
+  .page-container {
+    transform: inherit
+  }
+  #shopify-section-ingredients-content{
+    position: relative;
+    z-index: 1;
+  }
+  
+  #grid{
+    position: absolute;
+  }
+
+  #PageContainer {
+  
+    background: #0068FF;
+  }
+  p.ingredient-name{
+    font-size: 76px;
+    font-family: Sohne;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 93%;
+    text-transform: uppercase;
+    color: #f7f3e8;
+    cursor: default;
+  }
+
+  ul#ourList li#deletes{
+      width: 250px;
+      background: #F7F3E8;
+      border-radius: 25px;
+      padding: 30px;
+  }
+
+  ul#ourList li#deletes #detail_wrap img{
+   margin-bottom: 17px;
+   margin-top:20px;
+  }
+
+  ul#ourList li#deletes #detail_wrap span.title{
+    font-weight: bold;
+  }
+
+  ul#ourList li#deletes #detail_wrap p,
+  ul#ourList li#deletes #detail_wrap span.title{
+    color: #0068FF;
+    text-transform: uppercase;
+    font-family: 'Sohne';
+    line-height: 14px;
+    font-size: 14px;
+    
+  }
+
+  {% comment %}
+  /* ===================END CUSTOM STYLE=========================== */
+  {% endcomment %}
+</style>
+
+<script>
+  {% comment %}
+  // ===================BEGIN TEXT ANIMATION SCRIPT===========================
+  {% endcomment %}
+  
+  let sentences = document.querySelectorAll('.sentence');
+    let characterCount = 0;
+    let se = 100;//letter/75ms.
+    let letter_num = 0;
+    let load = 1;
+
+    //Get interval.
+    for (let i = 0; i < sentences.length; i++) {
+        let sentence = (i == 0)? sentences[i].textContent.length: parseInt(sentences[i].textContent.length + 1);
+        for (let j = 0; j < sentence; j++) {
+          letter_num ++;
+        }
+    }
+
+    let interval = se * letter_num;
+    //myCallback(sentences, characterCount);
+    //var intervalID = setInterval(myCallback, interval, sentences, characterCount);
+    //setTimeout(() => {load = 1}, interval);
+
+    function myCallback(sentences, characterCount)
+    {
+        for (let i = 0; i < sentences.length; i++) {
+            let sentence = sentences[i];
+            let newContent = '';
+            if (i < sentences.length - 1)
+              sentence.textContent += ',';
+            
+            // go through all characters of the sentence
+            for (let j = 0; j < sentence.textContent.length; j++) {
+                let substring = sentence.textContent.substr(j, 1);
+                // if we have a character, wrap it
+                if (substring !== " ") {
+                newContent += `<span style="--animation-order: ${characterCount};">${substring}</span>`;
+                } else {
+                    newContent += substring;
+                }
+                characterCount++;
+            }
+            sentence.innerHTML = newContent;
+        }
+    }
+  {% comment %}
+  // ====================BEGIN TEXT ANIMATION SCRIPT===========================
+  {% endcomment %}
+
+  {% comment %}
+  // ===================BEGIN WHEN TEXT HOVER POPUP IMAGE SCRIPT===============
+  {% endcomment %}
+  var hello = document.getElementsByClassName("hello"); // or:
+  let list = document.getElementById("ourList");
+  let grid = document.getElementById("grid");
+
+  document.querySelectorAll(".hello").forEach(function(element) {
+      element.addEventListener('mouseover', function(e) {
+          // image.style.visibility = "visible"
+          let img_src = element.nextElementSibling.getAttribute('src');
+          let title = element.nextElementSibling.getAttribute('title');
+          let description = element.nextElementSibling.value;
+          let item = '<li id = "deletes"><div id="detail_wrap"><span class="title">'+title+'</span><img src = "'+img_src+'"><p">'+description+'</p></div></li>';
+          
+          if(load == 1){
+            list.innerHTML = item
+          }
+
+          let x = e.clientX;
+          let y = e.clientY;
+
+          grid.style.left = (x - 70)+"px";
+          grid.style.top = (y - 140)+"px";
+      });
+      element.addEventListener('mouseout', function() {
+        if(load == 1){
+          document.querySelector("#deletes").remove();
+        }
+      });
+  });
+  {% comment %}
+  // ===================END WHEN TEXT HOVER POPUP IMAGE SCRIPT================
+  {% endcomment %}
+</script>

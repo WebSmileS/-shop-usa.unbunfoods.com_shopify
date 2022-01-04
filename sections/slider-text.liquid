@@ -1,0 +1,114 @@
+<div class="slider-text-content text-white">
+    {% if section.settings.slider_row > 0 %}
+        {% assign rows = section.settings.slider_row %}
+        {% assign columns = section.settings.slider_column %}
+        {% for row in (1..rows) %}
+            {% assign variable = row | modulo: 2 %}
+            {% if variable == 0 %}
+                {% assign direction = "rightJS" %}
+            {% else %}
+                {% assign direction = "leftJS" %}  
+            {% endif %}
+            <div class="text-slider row {{direction}} li">
+                {% if section.settings.slider_column > 0 %}
+                    {% for column in (1..columns) %}
+                        <div class="text-item col-{{ 12 | divided_by: columns }}"><img src="{{ section.settings.slider_image | img_url: 'large' }}"></div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+<div class="advantage text-white">
+    <div class="advantage-content page-width">
+        {% if section.settings.description != blank or section.settings.title != blank %}
+            <div class="advantage-title"> 
+                {{ section.settings.title }}
+            </div>
+            <div class="advantage-description">
+                {{ section.settings.description }}
+            </div>
+        {% endif %}
+        
+        {% if section.settings.btn_text != blank %}
+            <div class="our_btn">
+                <a class="new_btn" href="{{ section.settings.btn_url }}">
+                    <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.8452 9.21761L7.25768 2.34174L8.7306 0.529202L16.8327 10.4995L8.7306 20.4697L7.25768 18.6572L12.8452 11.7813L0.166015 11.7813L0.166015 9.21761L12.8452 9.21761Z" fill="#F7F3E8"/>
+                    </svg>
+                    {{ section.settings.btn_text }}
+                    <svg width="17" height="21" viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.272 11.6642L9.8595 18.5401L8.38659 20.3526L0.284503 10.3824L8.38659 0.412109L9.8595 2.22465L4.272 9.10052L16.9512 9.10052L16.9512 11.6642L4.272 11.6642Z" fill="#F7F3E8"/>
+                    </svg>                   
+                </a>
+            </div>
+        {% endif %}
+        
+        {% if section.settings.image != blank %}
+            <div id="advantage_image_wrap">
+                <img class="advantage_image" src="{{ section.settings.image | img_url: 'large' }}" width="555px" height="1120px">
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+
+{% schema %}
+    {
+        "name": "Slider Text",
+        "class": "slider-text",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "slider_image",
+                "label": "Slider SVG Image"
+            },
+            {
+                "type": "text",
+                "id": "title",
+                "label": "Title",
+                "default": "both HEALTHY & HEAVENLY"
+            },
+            {
+                "type": "text",
+                "id": "description",
+                "label": "Description",
+                "default": "WE’RE TAKING GRAIN-FREE BAKING TO ANOTHER LEVEL OF TASTE AND TRANSPARENCY...because, well, it’s about time someone did."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "text",
+                "id": "btn_text",
+                "label": "Button Text",
+                "default": "our story"
+            },
+            {
+                "type": "url",
+                "id": "btn_url",
+                "label": "Button Url"
+            },
+            {
+                "type": "number",
+                "id": "slider_row",
+                "label": "Slider Row",
+                "default": 3
+            },
+            {
+                "type": "number",
+                "id": "slider_column",
+                "label": "Slider Column",
+                "default": 3
+            }
+        ],
+        "presets": [
+            {
+                "name": "Slider Text"
+            }
+        ]
+    }
+{% endschema %}

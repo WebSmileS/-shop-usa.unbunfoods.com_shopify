@@ -1,0 +1,106 @@
+<section class="page-width product-faq">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="title">{{ section.settings.title }}</h3>
+            <h4 class="subtitle">{{ section.settings.subtitle }}</h4>
+            <div class="faq_section">
+                {% for block in section.blocks %}
+                    <div class="FaQ_Each">
+                        <section class="box">
+                            <span>
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                                <i class="fa fa-minus" id="other" aria-hidden="true"></i>
+                            </span>
+                            &nbsp;&nbsp;<span>{{ block.settings.question }}</span>
+                        </section>
+                        <section class="draw">
+                            {{ block.settings.answer }}
+                        </section>
+                    </div>
+                {% endfor %}
+            </div>     
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "PRODUCT FAQ",
+  "tag": "section",
+  "class": "faq",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Sub Title"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "FAQ",
+       "type": "list",
+       "settings": [
+         {
+           "type": "text",
+           "id": "question",
+           "label": "QUESTION"
+         },
+         {
+           "type": "text",
+           "id": "answer",
+           "label": "ANSWER"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+<style>
+.product-faq{
+    margin-top: 50px;
+}
+h3.title{
+    font-size: 38px;
+    text-transform: uppercase;
+}
+h4.subtitle{
+    font-weight: 100;
+    text-transform: uppercase;
+}
+.faq_section{
+	margin:40px auto;
+}
+.FaQ_Each{
+	padding-bottom: 10px;
+}
+.box  {
+    color: #666666;
+    padding-top: 15px;
+    padding-bottom:15px;
+    padding-left: 20px;
+    text-transform: uppercase;
+    cursor:pointer;
+    border: 1px solid #d9d9d9;
+    background: transparent;
+    border-radius: 30px;
+    font-size: 20px;
+}
+.draw {
+    display: none;
+    background: transparent;
+    padding: 20px;
+    font-size: 36-px;
+    color: #fff;
+    padding-left: 30px;
+    font-size: 20px;
+}
+#other{
+	display: none;
+}
+</style>

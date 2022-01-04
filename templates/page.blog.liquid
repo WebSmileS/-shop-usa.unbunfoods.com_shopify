@@ -1,0 +1,91 @@
+{% comment %}
+  The contents of the blog.liquid template can be found in /sections/blog-article.liquid
+{% endcomment %}
+{% section 'blog-article' %}
+{% section 'blog-feature' %}
+
+<style>
+    body {
+        background-color: #F7F3E8;
+    }
+header .site-header__mobile-nav, header.site-header {
+    background-color: transparent;
+}
+header ul#SiteNav .site-nav__link {
+    color: #0068FF;
+}
+#Slider-blog-column{
+    display: flex;
+}
+.feature-row__text h3, 
+.feature-row__text .h3, 
+.feature-row__text .featured-row__subtext p,
+.multicolumn-list h3, .multicolumn-list p
+{
+    color: #0068FF;
+}
+.multicolumn .title{
+    font-size: 35px;
+    color: #0068FF  ;
+    font-family: Sohne;
+}
+.rte:last-child {
+    font-family: Sohne;
+}
+
+#PageContainer .feature-row {
+    margin-bottom: 50px;
+}
+    .feature-row__text .h3, .feature-row__text h3{
+        font-size: 9.1vw;
+    }
+.feature-row__text .featured-row__subtext p {
+    text-transform: capitalize;
+    margin-top: 1.6vw;
+}
+@media screen and (min-width: 1201px) {
+    .feature-row__text .featured-row__subtext p {
+        text-transform: capitalize;
+        margin-top: 10px;
+        height: 50px;
+    }
+    .feature-row__text .h3, .feature-row__text h3{
+        font-size: 120px;
+    }
+    .rte-setting {
+        font-size: 1.8vw;
+        line-height: 105%;
+
+        /* or 20px */
+        text-transform: uppercase;
+
+        color: #C9C7C1;
+    }
+
+    .new_btn {
+        color: #0068FF !important;
+        border: #0068FF solid 2px;
+    }
+
+    .footer-menu {
+        background: #F7F3E8;
+        color: #0068FF;
+    }
+
+    .footer-menu-wrap .footer-nav {
+        color: #0068FF;
+    }
+
+    .footer-menu-wrap .footer-nav li a {
+        color: #0068FF;
+    }
+
+    hr {
+        background-color: #0068FF;
+    }
+
+    .social-menu ul a, .social-menu ul a:hover {
+        color: #0068FF;
+    }
+}
+</style>

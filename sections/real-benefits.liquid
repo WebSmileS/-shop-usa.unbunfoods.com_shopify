@@ -1,0 +1,60 @@
+<section class="page-width real-benefits">
+    <h3 class="title">REAL BENEFITS</h3>
+    <div class="real-benefits row">
+        <div class="col-md-6 col-sm-12">
+            <ul>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>Og trans fat</li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>Higher in fiber</li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>GOOD SOURCE OF PROTE</li>
+            </ul>
+        </div>
+        <div class="col-md-6 col-sm-12">
+            <ul>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>LOW GLYCEMIC INDEX</li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>NO ADDITIVES / PRESERVATIVES</li>
+                <li><i class="fa fa-check-circle" aria-hidden="true"></i>NO ENGINEERED INGREDIENTS</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+  "name": "Real Benefits",
+  "tag": "section",
+  "class": "benefits",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    }
+  ],
+  "blocks": [
+     {
+       "name": "benefits",
+       "type": "list",
+       "settings": [
+         {
+           "type": "text",
+           "id": "content",
+           "label": "BENEFITS CONTENT"
+         }
+       ]
+     }
+   ]
+}
+{% endschema %}
+
+<style>
+.real-benefits h3.title{
+    font-size: 38px;
+}
+.real-benefits ul li{
+    margin: 13px 0;
+    text-transform: uppercase;
+}
+.real-benefits ul li i{
+    margin-right: 8px;
+}
+</style>
